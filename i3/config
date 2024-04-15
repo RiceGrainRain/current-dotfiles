@@ -15,6 +15,7 @@ bindsym XF86KbdBrightnessDown exec --no-startup-id brightnessctl s 10%- -d smc::
 
 # the MOD key(windows)
 set $mod Mod4
+exec --no-startup-id xbindkeys
 exec --no-startup-id i3-battery-popup
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id sh ~/.config/polybar/launch.sh
@@ -29,11 +30,10 @@ gaps outer 6
 
 bindsym $mod+z		gaps outer current plus  5 
 bindsym $mod+Shift+z	gaps outer current minus 5
-bindsym $mod+Shift+y exec xrandr --output eDP-1 --auto --output HDMI-2 --auto --fill 1.5x1.5 --right-of eDP-1 
-#exec --no-startup-id feh --bg-scale ~/.config/i3/wallpapers/ALLqk82.png
+bindsym $mod+Shift+y exec xrandr --output eDP-1 --auto --output HDMI-2 --auto --fill 1x1 --right-of eDP-1 
+exec --no-startup-id feh --bg-scale ~/.config/i3/wallpapers/succulent.png
 # sets the wallpaper
-exec --no-startup-id variety
-exec --no-startup-id exec xrandr --output eDP-1 --auto --output HDMI-2 --auto --scale 1.5x1.5 --right-of eDP-1
+exec --no-startup-id exec xrandr --output eDP-1 --auto --output HDMI-2 --auto --scale 1x1 --right-of eDP-1
 # starts the compositor
 exec --no-startup-id picom --config ~/.config/picom/picom.conf 
 # Use pactl to adjust volume in PulseAudio.
@@ -143,7 +143,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'do you want to quit i3 (â—•â
 
 set $bg-color 	                #181619
 set $inactive-bg-color          #2f2d30
-set $text-color                 #ebdbb2
+set $text-color                 #ffffff
 set $inactive-text-color        #808080
 set $urgent-bg-color            #f38ba8
 

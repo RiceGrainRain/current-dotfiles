@@ -1,4 +1,0 @@
-0
-/home/red/.config/i3/wallpapers/Tranquility.png
-/home/red/.config/i3/wallpapers/wallpaper.jpg
-/home/red/.config/i3/wallpapers/wp9314839.jpg
