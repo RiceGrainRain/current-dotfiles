@@ -1,5 +1,5 @@
 
-#Pulse Audio
+d#Pulse Audio
  bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
@@ -18,7 +18,7 @@ set $mod Mod4
 exec --no-startup-id xbindkeys
 exec --no-startup-id i3-battery-popup
 exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id sh ~/.config/polybar/scripts/launch_polybar.sh
+exec --no-startup-id sh ~/.config/polybar/launch.sh
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock-fancy --nofork
 exec --no-startup-id nm-applet
 exec --no-startup-id thermald
@@ -27,11 +27,11 @@ exec --no-startup-id nitrogen --restore
 gaps inner 8
 gaps outer 6
 
-bindsym --release $mod+x exec --no-startup-id rofi -lines 10 -padding 0 -show search -modi search:~/.config/rofi/rofi-web-search.py -i -p "Search: "
+
 bindsym $mod+z		gaps outer current plus  5 
 bindsym $mod+Shift+z	gaps outer current minus 5
 bindsym $mod+Shift+y exec xrandr --output eDP-1 --auto --output HDMI-2 --auto --fill 1x1 --right-of eDP-1 
-exec --no-startup-id feh --bg-scale ~/.config/i3/wallpapers/wallpaper2.jpg
+exec --no-startup-id feh --bg-scale ~/.config/i3/wallpapers/succulent.png
 # sets the wallpaper
 exec --no-startup-id exec xrandr --output eDP-1 --auto --output HDMI-2 --auto --scale 1x1 --right-of eDP-1
 # starts the compositor
@@ -54,6 +54,7 @@ bindsym $mod+Return  exec alacritty
 bindsym $mod+d  exec rofi -show drun
 
 #nbrowser
+bindsym $mod+w exec nbrowser
 
 
 # kill focused window
